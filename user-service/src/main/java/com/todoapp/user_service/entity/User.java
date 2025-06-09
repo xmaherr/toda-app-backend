@@ -25,10 +25,6 @@ public class User {
     @Column(nullable = false)
     private String password;
 
-    public String getPassword() {
-        return password;
-    }
-
     private boolean enabled;
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
